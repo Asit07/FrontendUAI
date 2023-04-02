@@ -1,6 +1,5 @@
-import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
-import { Flex, Box, Text, Link, IconButton } from '@chakra-ui/react';
+import { Flex, Box, Text, Link } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 
@@ -12,40 +11,27 @@ function Navbar() {
   };
 
   return (
-    <Box bg="teal.500" w="100%">
+    <Box bg="blue.500" w="100%">
       <Flex
         as="nav"
         align="center"
-        justify="space-between"
         wrap="wrap"
         padding="1rem"
+        gap={4}
         color="white"
       >
-        <Flex align="center">
+        <Link as={NextLink} href="/">
           <Text fontSize="2xl" fontWeight="bold">
-            My App
+            ResumeParser
           </Text>
-        </Flex>
-        <Box display={{ base: 'block', md: 'none' }} onClick={toggleMenu}>
-          {isOpen ? <CloseIcon color="white" /> : <HamburgerIcon color="white" />}
-        </Box>
-        <Box
-          display={{ base: isOpen ? 'block' : 'none', md: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
-          alignItems="center"
-          flexGrow={1}
-        >
-          <Link as={NextLink} href="/">
-            <Text ml={{ base: 0, md: 2 }} mr={{ base: 2, md: 0 }} mt={{ base: 2, md: 0 }} fontSize={{ base: 'xl', md: 'lg' }} fontWeight="bold" cursor="pointer">
-              Home
-            </Text>
-          </Link>
-          <Link as={NextLink} href="/form">
-            <Text ml={{ base: 0, md: 2 }} mr={{ base: 2, md: 0 }} mt={{ base: 2, md: 0 }} fontSize={{ base: 'xl', md: 'lg' }} fontWeight="bold" cursor="pointer">
-              Form
-            </Text>
-          </Link>
-        </Box>
+        </Link>
+
+        <Link as={NextLink} href="/">
+          <Text fontSize={{ base: 'xl', md: 'lg' }}>
+            Submit Profile
+          </Text>
+        </Link>
+
       </Flex>
     </Box>
   );
