@@ -1,11 +1,18 @@
 import { ChakraProvider, Box, Text, FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
 import FilePicker from "chakra-ui-file-picker";
-import Navbar from "../components/navbar";
+import Navbar from "@/components/navbar";
+import connection from "@/connection";
 
 function Form() {
 
-  const handleChange = (event) => {
+  const handleChange = async (event) => {
     console.log(event);
+    // Construct form data
+    let formData = new FormData();
+    formData.append("resume_upload", event[0]);
+    console.log(process.env);
+    const result = await connection.post("/parse/", formData);
+    console.log(result);
   }
 
   return (
