@@ -1,5 +1,5 @@
 import { ChakraProvider, Box, Heading, Link, Text, VStack } from '@chakra-ui/react';
-import Navbar from './navbar';
+import Navbar from '../components/navbar';
 
 function Analysis() {
   return (

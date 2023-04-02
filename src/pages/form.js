@@ -1,5 +1,6 @@
 import { ChakraProvider, Box, Text, FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
-import Navbar from "./navbar";
+import FilePicker from "chakra-ui-file-picker";
+import Navbar from "../components/navbar";
 
 function Form() {
 
@@ -9,14 +10,18 @@ function Form() {
 
   return (
     <ChakraProvider>
-      <Navbar />
+      <Navbar/>
       <Box maxW="500px" mx="auto">
         <Text fontSize="3xl" fontWeight="bold" mb="4">Candidate Profile</Text>
         <form action="/api/form" method="POST" encType="multipart/form-data">
           <FormControl mb="4">
             <FormLabel>Resume Upload</FormLabel>
-            <Input type="file" name="resume" accept="application/pdf" required={true}
-              onChange={handleChange}/>
+            <FilePicker
+              onFileChange={handleChange}
+              placeholder="Upload Resume"
+              multipleFiles={false}
+              accept="application/pdf"
+            />
           </FormControl>
           <FormControl mb="4">
             <FormLabel>Email</FormLabel>
