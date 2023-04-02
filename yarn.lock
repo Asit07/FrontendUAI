@@ -1485,6 +1485,11 @@ caniuse-lite@^1.0.30001406:
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001473.tgz"
   integrity sha512-ewDad7+D2vlyy+E4UJuVfiBsU69IL+8oVmTuZnH5Q6CIUbxNfI50uVpRHbUPDD6SUaN2o0Lh4DhTrvLG/Tn1yg==
 
+chakra-ui-file-picker@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/chakra-ui-file-picker/-/chakra-ui-file-picker-0.1.0.tgz"
+  integrity sha512-6ic063Qjp+pFkadRA7qdXH0seHI0ORXZkCRtA5X/YdWRL0Il+5LoLakU5BDy3QYRJBY5M8Twwhk4ms7XSkMOEw==
+
 chalk@^2.0.0:
   version "2.4.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz"
