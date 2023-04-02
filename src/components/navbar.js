@@ -26,7 +26,7 @@ function Navbar() {
           </Text>
         </Link>
 
-        <Link as={NextLink} href="/">
+        <Link as={NextLink} href="/form">
           <Text fontSize={{ base: 'xl', md: 'lg' }}>
             Submit Profile
           </Text>

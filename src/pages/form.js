@@ -1,5 +1,5 @@
-import { ChakraProvider, Box, Text, FormControl, FormLabel, Input, Select, Button, Checkbox, HStack, Tag, TagRightIcon, TagLabel, Flex, Wrap, WrapItem, Center } from "@chakra-ui/react";
-import { useState } from "react";
+import { ChakraProvider, Box, Text, FormControl, FormLabel, Input, Select, Button, Checkbox, HStack, Tag, TagRightIcon, TagLabel, Flex, Wrap, WrapItem, Center, useToast } from "@chakra-ui/react";
+import { useState, createRef } from "react";
 import FilePicker from "chakra-ui-file-picker";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import Navbar from "@/components/navbar";
@@ -7,21 +7,28 @@ import connection from "@/connection";
 
 function Form() {
 
+  const eventID = "6428ea8e7b3bf388a402450f";
+
+  const toast = useToast();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [major, setMajor] = useState("");
   const [degree, setDegree] = useState("");
   const [gpa, setGPA] = useState("");
   const [graduationDate, setGraduationDate] = useState("");
   const [skills, setSkills] = useState([]);
   const [skillInput, setSkillInput] = useState("");
-  const [positionType, setPositionType] = useState("");
-  const [seekingSponsorship, setSeekingSponshorship] = useState("");
+  const [seekingPosition, setPositionType] = useState(0);
+  const [seekingSponsorship, setSeekingSponshorship] = useState(false);
+
+  const resume_input = createRef();
 
   const handleChange = async (event) => {
     // Ignore if no files listed
     if (event.length === 0) return;
     // Construct form data
-    let formData = new FormData();
+    const formData = new FormData();
     formData.append("resume_upload", event[0]);
     const { data } = await connection.post("/parse/", formData);
     // Populate form using data
@@ -48,12 +55,45 @@ function Form() {
     setSkillInput("");
   }
 
+  const submitProfile = async (event) => {
+    event.preventDefault();
+    // Construct form data
+    const file = resume_input.current.state.files[0];
+    const model = { email, name, skills, major: [major], degree: [degree],
+      graduation_date: graduationDate, gpa,
+      seeking_position: seekingPosition, seeking_sponsorship: seekingSponsorship,
+      event: eventID,
+    }
+    const formData = new FormData();
+    formData.append("resume", file);
+    formData.append("model", JSON.stringify(model));
+    await connection.post("/candidates/", formData);
+    submitSuccess();
+  }
+
+  const submitSuccess = () => {
+    toast({
+      title: "Candidate profile received!",
+      status: "success",
+    });
+    // Reset form
+    setName("");
+    setEmail("");
+    setMajor("");
+    setDegree("");
+    setGPA("");
+    setGraduationDate("");
+    setSkills([]);
+    setPositionType(0);
+    setSeekingSponshorship(false);
+  }
+
   return (
     <ChakraProvider>
       <Navbar/>
       <Box maxW="500px" mx="auto" mt="4" mb="4">
         <Text fontSize="3xl" fontWeight="bold" mb="4">Candidate Profile</Text>
-        <form action="/api/form" method="POST" encType="multipart/form-data">
+        <form onSubmit={submitProfile}>
           <FormControl mb="4">
             <FormLabel>Resume Upload</FormLabel>
             <FilePicker
@@ -61,6 +101,7 @@ function Form() {
               placeholder="Upload Resume"
               multipleFiles={false}
               accept="application/pdf"
+              ref={resume_input}
             />
           </FormControl>
           <FormControl mb="4">
@@ -75,8 +116,13 @@ function Form() {
           </FormControl>
           <FormControl mb="4">
             <FormLabel>Degree</FormLabel>
-            <Input type="text" name="major" required={true} value={degree}
+            <Input type="text" name="degree" required={true} value={degree}
               onChange={(event) => setDegree(event.target.value)}/>
+          </FormControl>
+          <FormControl mb="4">
+            <FormLabel>Major</FormLabel>
+            <Input type="text" name="major" required={true} value={major}
+              onChange={(event) => setMajor(event.target.value)}/>
           </FormControl>
           <FormControl mb="4">
             <FormLabel>GPA</FormLabel>
@@ -112,7 +158,7 @@ function Form() {
           </FormControl>
           <FormControl mb="4">
             <FormLabel>Seeking Position</FormLabel>
-            <Select value={positionType} onChange={(event) => setPositionType(event.target.value)}>
+            <Select value={seekingPosition} onChange={(event) => setPositionType(event.target.value)}>
               <option value={0}>Internship</option>
               <option value={1}>Full-time</option>
             </Select>
@@ -121,8 +167,8 @@ function Form() {
             <FormLabel>Seeking Sponsorship</FormLabel>
             <Checkbox value={seekingSponsorship} onChange={(event) => setSeekingSponshorship(event.target.value)}/>
           </FormControl>
+          <Button colorScheme="blue" type="submit">Submit</Button>
         </form>
-        <Button colorScheme="teal" size="md" type="submit">Submit</Button>
       </Box>
     </ChakraProvider>
   );

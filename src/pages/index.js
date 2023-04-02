@@ -14,7 +14,7 @@ import Navbar from "../components/navbar";
 import QRCode from "qrcode.react";
 
 function Event() {
-  
+
   const [eventName, setEventName] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [eventStartTime, setEventStartTime] = useState("");
@@ -39,13 +39,6 @@ function Event() {
   const removeEvent = (index) => {
     const newEvents = [...events];
     newEvents.splice(index, 1);
-    setEvents(newEvents);
-  };
-
-  const addCandidate = (eventIndex, candidateName) => {
-    const newEvents = [...events];
-    const newCandidates = [...events[eventIndex].candidates, candidateName];
-    newEvents[eventIndex].candidates = newCandidates;
     setEvents(newEvents);
   };
 
