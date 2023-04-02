@@ -40,14 +40,9 @@ function Navbar() {
               Home
             </Text>
           </Link>
-          <Link as={NextLink} href="/components/form">
+          <Link as={NextLink} href="/form">
             <Text ml={{ base: 0, md: 2 }} mr={{ base: 2, md: 0 }} mt={{ base: 2, md: 0 }} fontSize={{ base: 'xl', md: 'lg' }} fontWeight="bold" cursor="pointer">
               Form
-            </Text>
-          </Link>
-          <Link as={NextLink} href="/components/analysis">
-            <Text ml={{ base: 0, md: 2 }} mr={{ base: 2, md: 0 }} mt={{ base: 2, md: 0 }} fontSize={{ base: 'xl', md: 'lg' }} fontWeight="bold" cursor="pointer">
-              Analytics
             </Text>
           </Link>
         </Box>
