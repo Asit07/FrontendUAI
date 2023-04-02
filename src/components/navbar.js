@@ -32,6 +32,12 @@ function Navbar() {
           </Text>
         </Link>
 
+        <Link as={NextLink} href="/view_profiles">
+          <Text fontSize={{ base: 'xl', md: 'lg' }}>
+            View Profiles
+          </Text>
+        </Link>
+
       </Flex>
     </Box>
   );
