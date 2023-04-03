@@ -1,0 +1,267 @@
+[
+    {
+      "event": {
+        "id": "6428ea8e7b3bf388a402450f",
+        "collection": "Event"
+      },
+      "email": "oedreyer@crimson.ua.edu",
+      "name": "Oliver Dreyer",
+      "skills": [
+        "Content",
+        "Technical",
+        "Payments",
+        "Database",
+        "Facebook",
+        "Microsoft office suite",
+        "Excel",
+        "Administration",
+        "Programming",
+        "Crm",
+        "Publishing",
+        "Social media",
+        "German",
+        "International",
+        "Linux",
+        "C",
+        "C++"
+      ],
+      "major": [
+        "Management Information Systems"
+      ],
+      "degree": [
+        "Bachelor of Science in Commerce and Business Administration"
+      ],
+      "graduation_date": "1970-01-01T00:33:22",
+      "gpa": 4.0,
+      "seeking_position": 0,
+      "seeking_sponsorship": false,
+      "_id": "64297b232bda89c0d2ad7727",
+      "timestamp": "2023-04-02T07:54:59.343000",
+      "resume_upload": {
+        "id": "64297b232bda89c0d2ad7726",
+        "name": "resume.pdf"
+      }
+    },
+    {
+      "event": {
+        "id": "6428ea8e7b3bf388a402450f",
+        "collection": "Event"
+      },
+      "email": "elijah.hilty@gmail.com",
+      "name": "Elijah Hilty",
+      "skills": [
+        "Jira",
+        "Teaching",
+        "Docker",
+        "Github",
+        "Api",
+        "Css",
+        "Vue.js",
+        "Javascript",
+        "Python",
+        "Java",
+        "Coding",
+        "System",
+        "Html",
+        "German",
+        "Linux",
+        "C",
+        "Django",
+        "Flask",
+        "C++",
+        "Agile"
+      ],
+      "major": [
+        "Computer Science"
+      ],
+      "degree": [
+        "Bachelor of Science in Computer Science"
+      ],
+      "graduation_date": "1970-01-01T00:33:43",
+      "gpa": 4.0,
+      "seeking_position": 1,
+      "seeking_sponsorship": false,
+      "_id": "64297db32bda89c0d2ad7729",
+      "timestamp": "2023-04-02T08:05:55.918000",
+      "resume_upload": {
+        "id": "64297db32bda89c0d2ad7728",
+        "name": "HiltyDeveloperResume.pdf"
+      }
+    },
+    {
+      "event": {
+        "id": "6428ea8e7b3bf388a402450f",
+        "collection": "Event"
+      },
+      "email": "amsingh@crimson.ua.edu",
+      "name": "Asit Singh",
+      "skills": [
+        "Python",
+        "Js",
+        "Reports",
+        "Analytics",
+        "Math",
+        "Analysis",
+        "Database",
+        "Mathematics",
+        "Forecasting",
+        "Agile",
+        "Engineering",
+        "Sql",
+        "C#",
+        "Api",
+        "C++",
+        "Design",
+        "R",
+        "Safety",
+        "Github",
+        "Programming",
+        "Operating systems",
+        "C",
+        ".net",
+        "Tensorflow",
+        "Javascript",
+        "Docker",
+        "Presentation",
+        "System",
+        "Java",
+        "Algorithms",
+        "Computer science",
+        "Opencv",
+        "Research",
+        "Machine learning",
+        "International"
+      ],
+      "major": [
+        "Computer Science"
+      ],
+      "degree": [
+        "Bachelor of Science in Computer Science"
+      ],
+      "graduation_date": "1970-01-01T00:33:21",
+      "gpa": 3.25,
+      "seeking_position": 1,
+      "seeking_sponsorship": false,
+      "_id": "64298d6c6000d35704c3bf16",
+      "timestamp": "2023-04-02T09:13:00.296000",
+      "resume_upload": {
+        "id": "64298d6c6000d35704c3bf15",
+        "name": "AsitSingh_Resume.pdf"
+      }
+    },
+    {
+      "event": {
+        "id": "6428ea8e7b3bf388a402450f",
+        "collection": "Event"
+      },
+      "email": "mlmcnees@crimson.ua.edu",
+      "name": "Melody McNees",
+      "skills": [
+        "Administration",
+        "Reports",
+        "Policies",
+        "Finance",
+        "Money",
+        "Operations",
+        "Gaap",
+        "Distribution",
+        "Invoices",
+        "Acquisition",
+        "Phone calls",
+        "Outreach"
+      ],
+      "major": [
+        "Accounting"
+      ],
+      "degree": [
+        "Bachelor of Science in Commerce and Business Administration"
+      ],
+      "graduation_date": "1970-01-01T00:33:43",
+      "gpa": 3.98,
+      "seeking_position": 1,
+      "seeking_sponsorship": false,
+      "_id": "64298dcb6000d35704c3bf18",
+      "timestamp": "2023-04-02T09:14:35.986000",
+      "resume_upload": {
+        "id": "64298dcb6000d35704c3bf17",
+        "name": "MelodyMcNeesResume.pdf"
+      }
+    },
+    {
+      "event": {
+        "id": "6428ea8e7b3bf388a402450f",
+        "collection": "Event"
+      },
+      "email": "faithgiebe@gmail.com",
+      "name": "Faith Giebe",
+      "skills": [
+        "Marketing",
+        "Excel",
+        "Design",
+        "Powerpoint",
+        "Advertising",
+        "Video",
+        "Plan",
+        "Administration",
+        "Adobe",
+        "Customer experience",
+        "Content",
+        "Communication",
+        "Word"
+      ],
+      "major": [
+        "Marketing"
+      ],
+      "degree": [
+        "Masters of Science in Marketing"
+      ],
+      "graduation_date": "1970-01-01T00:33:43",
+      "gpa": 4.0,
+      "seeking_position": 0,
+      "seeking_sponsorship": false,
+      "_id": "64298e606000d35704c3bf1a",
+      "timestamp": "2023-04-02T09:17:04.763000",
+      "resume_upload": {
+        "id": "64298e606000d35704c3bf19",
+        "name": "FaithGiebeResume.pdf"
+      }
+    },
+    {
+      "event": {
+        "id": "6428ea8e7b3bf388a402450f",
+        "collection": "Event"
+      },
+      "email": "dagreen10@crimson.ua.edu",
+      "name": "Donavan Green",
+      "skills": [
+        "Javascript",
+        "Engagement",
+        "Administration",
+        "Coaching",
+        "Green",
+        "Accounting",
+        "Visual",
+        "Mysql",
+        "Microsoft office suite",
+        "C",
+        "Html",
+        "C#"
+      ],
+      "major": [
+        "Management Information Systems"
+      ],
+      "degree": [
+        "Bachelor of Science in Commerce & Business Administration"
+      ],
+      "graduation_date": "1970-01-01T00:33:43",
+      "gpa": 3.52,
+      "seeking_position": 0,
+      "seeking_sponsorship": false,
+      "_id": "64298ec16000d35704c3bf1c",
+      "timestamp": "2023-04-02T09:18:41.017000",
+      "resume_upload": {
+        "id": "64298ec16000d35704c3bf1b",
+        "name": "DonavanGreenResume.pdf"
+      }
+    }
+  ]
